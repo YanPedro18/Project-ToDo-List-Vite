@@ -1,0 +1,38 @@
+
+
+.notTask {
+
+    border-top: 1px solid var(--gray-color-500);
+    border-radius: 0.5rem;
+    padding-top: 1rem;
+    width: 93.0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.notTask h1, p {
+    color: var(--gray-color-300);
+}
+.notTask > svg {
+    color: var(--gray-color-300);
+}
+.notTask h1 {
+    font-size: 1.3rem;
+}
+
+@media screen and (max-width: 468px) {
+    .notTask {
+        border-top: 1px solid var(--gray-color-500);
+        /* border-radius: 0.5rem; */
+        padding-top: 1rem;
+        width: 100%;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+}

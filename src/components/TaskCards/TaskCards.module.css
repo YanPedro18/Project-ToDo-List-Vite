@@ -1,0 +1,173 @@
+.taskCards {
+  display: flex;
+  background: var(--gray-color-500);
+  width: 46rem;
+  height: 4.5rem;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+  border-radius: 0.5rem;
+  margin-bottom: 0.75rem;
+  border: 1px solid var(--gray-color-400);
+}
+
+.checked {
+
+  width: 25%;
+  text-align: center;
+}
+
+.trash {
+  width: 100%;
+  color: var(--gray-color-300);
+  text-align: right;
+  margin: 0;
+  margin-top: 0.5rem;
+  margin-right: 1.7rem;
+
+}
+
+.trash:hover {
+
+  color: var(--red-color-main);
+  cursor: pointer;
+}
+
+.content {
+  width: 100%;
+}
+
+.content p {
+  font-size: 0.9rem;
+}
+
+.contentChecked {
+  width: 100%;
+}
+
+.contentChecked p {
+  font-size: 0.9rem;
+  text-decoration: line-through;
+}
+
+@supports (-webkit-appearance: none) or (-moz-appearance: none) {
+  .checked input[type=checkbox] {
+    --active: #fa2441;
+    --active-inner: #fff;
+    --focus: 2px #fb344e3b;
+    --border: #BBC1E1;
+    --border-hover: #fa2441;
+    --background: #fff;
+    --disabled: #F6F8FF;
+    --disabled-inner: #E1E6F9;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    height: 21px;
+    outline: none;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    margin: 0;
+    cursor: pointer;
+    border: 1px solid var(--bc, var(--border));
+    background: var(--b, var(--background));
+    transition: background 0.3s, border-color 0.3s, box-shadow 0.2s;
+  }
+
+  .checked input[type=checkbox]:after {
+    content: "";
+    display: block;
+    left: 0;
+    top: 0;
+    position: absolute;
+    transition: transform var(--d-t, 0.3s) var(--d-t-e, ease), opacity var(--d-o, 0.2s);
+  }
+
+  .checked input[type=checkbox]:checked {
+    --b: var(--active);
+    --bc: var(--active);
+    --d-o: .3s;
+    --d-t: .6s;
+    --d-t-e: cubic-bezier(.2, .85, .32, 1.2);
+  }
+
+  .checked input[type=checkbox]:disabled {
+    --b: var(--disabled);
+    cursor: not-allowed;
+    opacity: 0.9;
+  }
+
+  .checked input[type=checkbox]:disabled:checked {
+    --b: var(--disabled-inner);
+    --bc: var(--border);
+  }
+
+  .checked input[type=checkbox]:disabled+label {
+    cursor: not-allowed;
+  }
+
+  .checked input[type=checkbox]:hover:not(:checked):not(:disabled) {
+    --bc: var(--border-hover);
+  }
+
+  .checked input[type=checkbox]:focus {
+    box-shadow: 0 0 0 var(--focus);
+  }
+
+  .checked input[type=checkbox]:not(.switch) {
+    width: 21px;
+  }
+
+  .checked input[type=checkbox]:not(.switch):after {
+    opacity: var(--o, 0);
+  }
+
+  .checked input[type=checkbox]:not(.switch):checked {
+    --o: 1;
+  }
+
+  .checked input[type=checkbox]+label {
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+    margin-left: 4px;
+  }
+
+  .checked input[type=checkbox]:not(.switch) {
+    border-radius: 7px;
+  }
+
+  .checked input[type=checkbox]:not(.switch):after {
+    width: 5px;
+    height: 9px;
+    border: 2px solid var(--active-inner);
+    border-top: 0;
+    border-left: 0;
+    left: 7px;
+    top: 4px;
+    transform: rotate(var(--r, 20deg));
+  }
+
+  .checked input[type=checkbox]:not(.switch):checked {
+    --r: 43deg;
+  }
+}
+
+.checked * {
+  box-sizing: inherit;
+}
+
+.checked *:before,
+.checked *:after {
+  box-sizing: inherit;
+}
+
+@media screen and (max-width: 468px) {
+  .taskCards {
+    width: 20rem;
+  }
+  .checked {
+    margin-left: 1rem;
+  }
+}

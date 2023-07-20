@@ -1,0 +1,129 @@
+.search {
+    z-index: 1;
+    width: 100%;
+    display: grid;
+    flex-wrap: wrap;
+    grid-template-columns: 39.875rem 6rem;
+    place-items: center;
+    align-items: center;
+    position: relative;
+    left: 50%;
+    top: 0%;
+    transform: translate(-50%, -100%);
+    margin: 2rem auto;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+@media screen and (max-width: 468px) {
+    .search {
+        grid-template-columns: 1fr;
+        gap: 0;
+        transform: translate(-50%, -55%);
+        
+    }
+    .searchIpt>input {
+       margin-bottom: 0.5rem;
+        width: 19rem !important;
+    }
+    .newsTasksCards {
+        width: 90% !important; 
+    }
+    .taskHeader {
+        margin-top: 3rem !important;
+    }
+}
+
+.searchIpt input {
+    width: 39.875rem;
+    height: 2.9rem;
+    border: 0;
+    color: var(--gray-color-200);
+    margin-right: 0.5rem;
+    border-radius: 0.5rem;
+    font-size: 0.9rem;
+    padding-left: 0.9rem;
+    background: var(--gray-color-500);
+}
+
+.searchIpt input::placeholder {
+    font-size: 0.9rem;
+}
+
+.searchBtn {
+    cursor: pointer;
+    color: var(--gray-color-100);
+    width: 6rem;
+    height: 3.4rem;
+    background: var(--red-color-main);
+    display: flex;
+    border-radius: 0.5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.searchBtn button {
+    margin: 0;
+    font-weight: bold;
+    cursor: pointer;
+    color: var(--gray-color-100);
+    border: none;
+    background: none;
+}
+
+.searchBtn svg {
+    margin: 0;
+    padding-left: 0.1rem;
+}
+
+.taskHeader {
+    padding-bottom: 1.2rem;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.taskCreated {
+    z-index: 9999;
+}
+
+.taskDone {
+    z-index: 9999;
+}
+
+.taskCreated p {
+    color: var(--red-color-main);
+    font-weight: bold;
+   
+}
+
+.taskCreated p>span {
+    color: white;
+    background-color: var(--gray-color-500);
+    padding: 0.2rem 0.7rem 0.2rem 0.7rem;
+    border-radius: 0.9rem;
+
+}
+
+.taskDone p {
+    color: #8284FA;
+    font-weight: bold;
+}
+
+.taskDone p>span {
+    color: white;
+    background-color: var(--gray-color-500);
+    padding: 0.2rem 0.7rem 0.2rem 0.7rem;
+    border-radius: 0.9rem;
+
+}
+
+.newsTasksCards {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
