@@ -34,10 +34,9 @@ function Search() {
     setTasks(updatedTasks);
   }
   //removo as tasks da lista atualizada.
-  function removeTask() {
+  function removeTask(index) {
     const removeNewTask = [...tasks];
-    removeNewTask.pop();
-    setTasks(removeNewTask);
+    setTasks(removeNewTask.filter((value, indice) => indice != index));
   }
   return (
     <>
@@ -84,7 +83,7 @@ function Search() {
                 key={index}
                 content={content}
                 handleclicks={() => handleTaskCompletion(index)}
-                deleteTask={removeTask}
+                deleteTask={() => removeTask(index)}
               />
             );
           })
